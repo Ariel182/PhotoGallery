@@ -27,10 +27,10 @@ public class FlickrFetchr {
 
     public byte[] getUrlBytes(String urlSpec) throws IOException {
         URL url = new URL(urlSpec);
-        //HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+        HttpURLConnection connection = (HttpURLConnection)url.openConnection();
 
-        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("10.101.151.22", 8080));
-        HttpURLConnection connection = (HttpURLConnection)url.openConnection(proxy);
+        //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("10.101.151.22", 8080));
+        //HttpURLConnection connection = (HttpURLConnection)url.openConnection(proxy);
 
         try {
             ByteArrayOutputStream out = new ByteArrayOutputStream();
